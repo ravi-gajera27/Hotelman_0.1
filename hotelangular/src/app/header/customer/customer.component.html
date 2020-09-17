@@ -1,0 +1,58 @@
+<!--<div class="container" style="margin-top: 10%">
+    <mat-tab-group class="matTabGroups" (selectedTabChange)="onClickLink($event)">
+        <mat-tab>
+           <ng-template mat-tab-label>
+             <img src="../../../assets/tray.png" style="filter: invert(100%)">
+           </ng-template>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+              <img src="../../../assets/tray.png" style="filter: invert(100%)">
+            </ng-template>
+         </mat-tab>
+    </mat-tab-group>
+</div> -->
+
+<!--<div class="container" style="margin-top: 10%">
+    <nav mat-tab-nav-bar backgroundColor="primary" color="primary">
+        <a mat-tab-link label="Recommended" routerLink="recommended"></a>
+        <a mat-tab-link label="Starter" routerLink="starter"></a>
+        <a mat-tab-link label="Main-course" routerLink="main-course"></a>
+        <a mat-tab-link label="Breads" routerLink="breads"></a>
+    </nav>
+</div> -->
+
+<!--<div class="container" style="margin-top: 10%">
+    <nav mat-tab-nav-bar backgroundColor="primary">
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}</a>
+    </nav>
+</div> -->
+
+
+<div class="container" style="margin-top: 10%">
+    <div class="input-group mb-3">
+        <span class="input-group-text">
+            <mat-icon>search</mat-icon>
+        </span>
+        <input type="text" class="form-control" placeholder="Search">
+    </div>
+   <!-- <div fxLayout fxLayoutAlign="space-around">
+        <a routerLink="/header/customer/recommended" fxFlex="15%"><img src="../../../assets/tray.png"></a>
+        <a routerLink="/header/customer/starter" fxFlex="15%"><img src="../../../assets/tray.png"></a>
+        <a routerLink="/header/customer/main-course" fxFlex="15%"><img src="../../../assets/tray.png"></a>
+        <a routerLink="/header/customer/breads" fxFlex="15%"><img src="../../../assets/tray.png"></a>
+    </div> -->
+    <div class="scrolling-wrapper" fxLayout fxLayoutAlign="space-between">
+        <a routerLink="/header/customer/recommended" fxFlex="20%"><img src="../../../assets/tray.png"></a>
+        <a routerLink="/header/customer/starter" fxFlex="20%"><img src="../../../assets/starter.png" style="padding: 0"></a>
+        <a routerLink="/header/customer/main-course" fxFlex="20%"><img src="../../../assets/main-course.png"></a>
+        <a routerLink="/header/customer/breads" fxFlex="20%"><img src="../../../assets/bread.png"></a>
+        <a routerLink="/header/customer/recommended" fxFlex="20%"><img src="../../../assets/tray.png"></a>
+        <a routerLink="/header/customer/starter" fxFlex="20%"><img src="../../../assets/starter.png" style="padding: 0"></a>
+        <a routerLink="/header/customer/main-course" fxFlex="20%"><img src="../../../assets/main-course.png"></a>
+        <a routerLink="/header/customer/breads" fxFlex="20%"><img src="../../../assets/bread.png"></a>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>

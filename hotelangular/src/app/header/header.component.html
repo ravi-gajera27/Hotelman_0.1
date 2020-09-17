@@ -1,0 +1,52 @@
+<mat-toolbar class="matToolbar">
+    <mat-toolbar-row fxLayout fxLayoutAlign="space between">
+        <div fxFlex="auto">Hotel Logo</div>
+        <div fxFlex="auto">Hotel Name</div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!--<div class="container" style="margin-top:10%">
+    <mat-toolbar color="accent">
+        <mat-toolbar-row fxLayout fxLayoutalign="center" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+            <a routerLink="/" role="button" mat-flat-button color="accent">Recommended</a>
+            <a routerLink="/" role="button" mat-flat-button color="accent">Starter</a>
+            <a routerLink="/" role="button" mat-flat-button color="accent">Breads</a>
+            <a routerLink="/" role="button" mat-flat-button color="accent">main-course</a>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>-->
+
+<!--<div class="container" style="margin-top: 10%;height:100vh">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm style="outline: none">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <div fxShow="true" fxHide.lt-md="true">
+                <a routerLink="/" mat-flat-button color="primary">Recommended</a>
+                <a routerLink="/" mat-flat-button color="primary">Starter</a>
+                <a routerLink="/" mat-flat-button color="primary">Breads</a>
+                <a routerLink="/" mat-flat-button color="primary">main-course</a>
+                <a routerLink="/" mat-flat-button color="primary">My-Order</a>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a routerLink="/header" routerLinkActive="active-link" mat-list-item>Recommended</a>
+                <a routerLink="/header" routerLinkActive="active-link" mat-list-item>Starter</a>
+                <a routerLink="/header" routerLinkActive="active-link" mat-list-item>Breads</a>
+                <a routerLink="/header" routerLinkActive="active-link" mat-list-item>main-course</a>
+                <a routerLink="/header" routerLinkActive="active-link" mat-list-item>My-Order</a>
+                <a (click)="sidenav.toggle()" mat-list-item>
+                    <mat-icon>close</mat-icon> Close
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+</div> -->
+
+<router-outlet></router-outlet>

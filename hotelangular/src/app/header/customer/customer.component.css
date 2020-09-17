@@ -1,0 +1,58 @@
+.matTabGroups{
+    background-image: linear-gradient(to right, rgb(132,73,121), rgb(143,79,131),rgb(251,141,149),rgb(254,175,178))
+}
+
+a{
+    margin-right: 10%; 
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    color:black;
+}
+
+a:focus{
+    background-color: black;
+}
+
+img{
+  color:black;
+}
+
+
+a:focus > img{
+    filter: invert(100%);  
+}
+
+
+.form-control{
+    background-color: #f3f3f3;
+    border-left: none;
+    outline: none;
+    border-color: #f3f3f3;
+}
+
+.form-control:active,.form-control:focus{
+    background-color: #f3f3f3;
+    border-left: none;
+    outline: none;
+    border-color: #f3f3f3;
+    box-shadow: none;
+}
+
+
+.input-group-text{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f3f3f3; 
+    border-color: transparent;
+}
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+   

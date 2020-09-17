@@ -1,0 +1,7 @@
+<div class="container" style="margin-top: 10%">
+    <mat-tab-group backgroundColor="primary" (selectedTabChange)="onClickLink($event)">
+        <mat-tab *ngFor="let link of navLinks" [label]="link.label"></mat-tab>
+    </mat-tab-group>
+</div> 
+
+<router-outlet></router-outlet>

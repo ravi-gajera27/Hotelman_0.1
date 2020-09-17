@@ -1,0 +1,25 @@
+<!--<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center">
+    <div fxFlex="20%" *ngFor="let element of recipeservice.recipes">
+        <img mat-card-image class="img-responsive" [src]="element.imagepath">
+    </div>
+</div> -->
+
+<div class="container">
+    <mat-grid-list [cols]="gridCol" gutterSize="5%" rowHeight="1:1.5">
+        <mat-grid-tile *ngFor="let element of recipeservice.recipes;let i=index"
+        [ngStyle]="{'background-color': myColor[i%4] }">
+          <a href="#"> <img mat-card-img [src]="element.imagepath" style="width: 85%; height: 130px;"></a>
+           <!-- <mat-grid-tile-footer style="background-color: white;color:black;height: 85px;">
+                <mat-list>
+                    <mat-list-item><span class="veg-indian-vegetarian"> &nbsp;{{ element.recipename }}</span>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <div class="col-9">{{ element.recipeprice | currency:"&#8377;"}}</div>
+                        <div class="col-2"><button mat-raised-button class="pull-right" color="accent">Add</button>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-grid-tile-footer>-->
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

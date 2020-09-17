@@ -1,0 +1,18 @@
+img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px; 
+}
+
+mat-grid-tile{
+    border-radius: 10px; 
+}
+
+mat-grid-list{
+    margin-top: 5%; 
+}
+
+a{
+    cursor: pointer;
+}

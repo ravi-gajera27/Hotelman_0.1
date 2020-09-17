@@ -1,0 +1,33 @@
+<h3 mat-dialog-title>Recipe Dialog</h3>
+
+<mat-dialog-content *ngIf="!deleteMode">
+    <form (ngSubmit)="onSubmit()" [formGroup]="dialogFormGroup">
+        <mat-form-field>
+            <input type="text" formControlName="category" matInput placeholder="Category">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput formControlName="recipename" placeholder="Recipe Name">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="number" matInput formControlName="recipeprice" placeholder="Recipe Price">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput formControlName="imagepath" placeholder="Imagepath">
+        </mat-form-field>
+        <mat-dialog-actions>
+            <button mat-raised-button type="submit" color="primary" *ngIf="!updateMode">Submit</button>
+            <button mat-raised-button type="submit" color="primary" *ngIf="updateMode">Update</button>
+        </mat-dialog-actions>
+        <br>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="deleteMode">
+     <h4>Are You Sure To Delete Recipe ? </h4>
+     <br>
+     <mat-dialog-actions>
+        <button mat-raised-button (click)="onSubmit()" color="primary">Yes</button>
+        <button mat-raised-button mat-dialog-close color="accent">No</button>
+    </mat-dialog-actions>
+    <br>
+</mat-dialog-content>

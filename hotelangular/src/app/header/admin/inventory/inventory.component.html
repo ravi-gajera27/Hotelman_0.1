@@ -1,0 +1,36 @@
+<div class="container">
+    <br>
+    <mat-form-field>
+        <input type="text" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="openRecipeDialog()">Add Recipe</button>
+    <br>
+    <br>
+    <div class="mat-elevation-z8" color="primary">
+        <mat-table [dataSource]="dataSource" matSort>   
+            <ng-container matColumnDef="category">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Category</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.category }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="recipename">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.recipename }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="recipeprice">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.recipeprice }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="update">
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="openRecipeDialogUpdate(element)">Update</button></mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let element"><button mat-raised-button color="accent" (click)="openRecipeDialogDelete(element._id)">Delete</button></mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns:displayedColumns"></mat-row>
+        </mat-table>
+        <mat-paginator [pageSizeOptions]="[5,10,15,20,25,30]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
